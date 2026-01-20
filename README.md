@@ -15,7 +15,7 @@ Automated event discovery from [lu.ma](https://lu.ma) with AI-powered filtering 
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/luma-events-widget.git
+git clone https://github.com/DanielOrtiz0220/luma-events-widget.git
 cd luma-events-widget
 
 # Install dependencies
