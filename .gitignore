@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.env
+logs/
+data/
+config/state.json
+config/config.json
+config/config.json.backup

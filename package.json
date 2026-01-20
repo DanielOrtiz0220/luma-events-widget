@@ -1,0 +1,22 @@
+{
+  "name": "luma-events",
+  "version": "1.0.0",
+  "description": "Daily scraper for lu.ma events with AI filtering and Übersicht widget",
+  "type": "module",
+  "scripts": {
+    "scrape": "tsx src/scraper/luma-scraper.ts",
+    "filter": "tsx src/filter/claude-filter.ts",
+    "run": "tsx src/scraper/index.ts",
+    "catchup": "tsx src/scheduler/run-with-catchup.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "dotenv": "^17.2.3",
+    "playwright": "^1.50.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}
