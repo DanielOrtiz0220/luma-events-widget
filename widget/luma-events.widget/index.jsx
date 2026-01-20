@@ -283,12 +283,19 @@ function openConfig() {
 
 // Open event URL (using run() for Übersicht)
 function openEvent(url) {
-  run(`open "${url}"`);
+  // Only allow http/https URLs to prevent command injection
+  if (url && /^https?:\/\//i.test(url)) {
+    // Escape any shell-special characters
+    const safeUrl = url.replace(/["`$\\]/g, '\\$&');
+    run(`open "${safeUrl}"`);
+  }
 }
 
 // Image component with fallback
 function EventImage({ src, alt }) {
-  if (!src) {
+  // Only load images from lu.ma domain to prevent loading from untrusted sources
+  const isValidSrc = src && /^https:\/\/[^/]*lu\.ma\//i.test(src);
+  if (!isValidSrc) {
     return <div className={coverPlaceholderStyle}>📅</div>;
   }
   return (

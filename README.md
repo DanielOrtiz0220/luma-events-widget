@@ -2,7 +2,7 @@
 
 Automated event discovery from [lu.ma](https://lu.ma) with AI-powered filtering and a macOS desktop widget.
 
-![Widget Preview](https://via.placeholder.com/400x300?text=Widget+Preview)
+![Widget Preview](assets/widget-preview.png)
 
 ## Features
 
